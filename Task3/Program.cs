@@ -11,7 +11,7 @@ namespace Task3
 											new People("Sam", 25), 
 											new People("Jack", 30), 
 											new People("Chris", 26) };
-
+// kill me please
 			CollectivePeople collective = new CollectivePeople(people);
 			foreach (People p in collective)
 			{
