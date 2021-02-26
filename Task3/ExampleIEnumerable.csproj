@@ -43,11 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IEnumerableObjects\CollectivePeopleIEnumerable.cs" />
+    <Compile Include="IEnumerableObjects\IEnumeratorObjects\EnumeratorPeople.cs" />
+    <Compile Include="IEnumerableObjects\IEnumeratorObjects\EnumeratorTransport.cs" />
+    <Compile Include="IEnumerableObjects\TransportEnumerable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UsingLibrary\UsingLibrary.csproj">
+      <Project>{0ec835cd-71d1-4e18-8be7-f14bdfa83d9f}</Project>
+      <Name>UsingLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
