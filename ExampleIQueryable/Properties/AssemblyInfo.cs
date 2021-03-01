@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанные с этой сборкой.
-[assembly: AssemblyTitle("ExampleICloneable")]
+[assembly: AssemblyTitle("ExampleIQueryable")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ExampleICloneable")]
+[assembly: AssemblyProduct("ExampleIQueryable")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID представляет идентификатор typelib, если этот проект доступен из модели COM
-[assembly: Guid("c486edc8-b329-4206-942a-0dcd31089e75")]
+[assembly: Guid("b0044eb0-d850-49f9-8d06-ff277c4692dc")]
 
 // Сведения о версии сборки состоят из указанных ниже четырех значений:
 //

@@ -27,6 +27,9 @@ namespace UsingLibrary
 		public Transport(double mass, double maxSpeed, int numberSeats) : base(mass)
 		{
 			_maxSpeed = maxSpeed;
+
+			if (numberSeats < 0)
+				throw new ArgumentOutOfRangeException("Количество мест не может быть отрицательным числом");
 			_numbersSeats = numberSeats;
 		}
 
