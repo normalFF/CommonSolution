@@ -1,7 +1,7 @@
 ﻿using System;
 using UsingLibrary;
 
-namespace Task1
+namespace Task1 //Мы можем изменить название namespace'a на более подходящее, например OOP?
 {
 	class Program
 	{

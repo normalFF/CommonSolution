@@ -14,7 +14,7 @@ namespace UsingLibrary
 			}
 		}
 
-		public BaseObject(double mass)
+		public BaseObject(double mass) //Мы нигде не собираем BaseObject, кроме как в дочернем классе public -> protected
 		{
 			if (mass <= 0)
 				throw new ArgumentOutOfRangeException("Масса не может быть отрицательной!");
