@@ -32,8 +32,8 @@ namespace ExampleIQueryable
 		static void Main(string[] args)
 		{
 			People[] collectivePeople = CreateCollective(100);
-			var selected = collectivePeople.Where(testc => testc.Mass >= 58 && testc.Mass <= 60 && testc.Name.Length == 5);
-
+			var selected = collectivePeople.Where(testc => testc.Mass >= 58 && testc.Mass <= 60 && testc.Name.Length == 5); //testc -> testCollective
+			//Можем добавить больше запросов? Например: order by, group by, any, all, sum, min, max
 			foreach (People p in selected)
 			{
 				Console.WriteLine(p.ToString());

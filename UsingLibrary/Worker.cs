@@ -8,7 +8,7 @@ namespace UsingLibrary
 	{
 		string _company; // можем прописать private явно
 
-		public string Company // можем избавиться
+		public string Company
 		{
 			get
 			{

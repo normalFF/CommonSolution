@@ -9,7 +9,7 @@ namespace UsingLibrary
 		protected string _name;//protected -> private
 		protected int _age; //Мы можем сделать поля приватными?
 
-		public string Name	//В программе мы не обращаемся к _name и _age напрямую, можем ли обойтись без геттеров?
+		public string Name
 		{
 			get
 			{
