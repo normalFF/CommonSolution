@@ -7,13 +7,14 @@ namespace UsingLibrary
 {
 	public partial class People : IComparable
 	{
-		public int CompareTo(object obj)
+		public int CompareTo(object obj) //нужна проверка на null и на соответствие типа (иначе as вернёт null)
 		{
 			People p = obj as People;
 			return string.Compare(this.Name, p.Name);
 		}
-
-		class sortNameDescendingHelper : IComparer
+		
+		class sortNameDescendingHelper : IComparer //sortNameDescendingHelper -> SortNameDescendingHelper
+			//нужна проверка на null и на соответствие типа (иначе as вернёт null)
 		{
 			int IComparer.Compare(object objOne, object objTwo)
 			{
@@ -24,7 +25,8 @@ namespace UsingLibrary
 			}
 		}
 
-		class sortAgeAscendingHelper : IComparer
+		class sortAgeAscendingHelper : IComparer //sortAgeAscendingHelper -> SortAgeAscendingHelper
+			//нужна проверка на null и на соответствие типа (иначе as вернёт null)
 		{
 			int IComparer.Compare(object objOne, object objTwo)
 			{
@@ -40,7 +42,8 @@ namespace UsingLibrary
 			}
 		}
 
-		class sortAgeDescendingHelper : IComparer
+		class sortAgeDescendingHelper : IComparer // Имя
+			//нужна проверка на null и на соответствие типа (иначе as вернёт null)
 		{
 			int IComparer.Compare(object objOne, object objTwo)
 			{
@@ -56,7 +59,8 @@ namespace UsingLibrary
 			}
 		}
 
-		class sortMassAscendingHelper : IComparer
+		class sortMassAscendingHelper : IComparer // Имя
+			//нужна проверка на null и на соответствие типа (иначе as вернёт null)
 		{
 			int IComparer.Compare(object objOne, object objTwo)
 			{
@@ -72,7 +76,8 @@ namespace UsingLibrary
 			}
 		}
 
-		class sortMassDescendingHelper : IComparer
+		class sortMassDescendingHelper : IComparer // Имя
+			//нужна проверка на null и на соответствие типа (иначе as вернёт null)
 		{
 			int IComparer.Compare(object objOne, object objTwo)
 			{
@@ -88,7 +93,7 @@ namespace UsingLibrary
 			}
 		}
 
-		public static IComparer sortNameDescending()
+		public static IComparer sortNameDescending() // Если что-либо имеет модификатор доступа public, то оно пишется с заглавной буквы 
 		{
 			return new sortNameDescendingHelper();
 		}

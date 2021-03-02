@@ -19,7 +19,7 @@ namespace Task3.IEnumerableObjects
 		{
 			get
 			{
-				try
+				try //можем избавиться от try catch
 				{
 					return _people[_position];
 				}

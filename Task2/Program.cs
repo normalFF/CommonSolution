@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace Task2
+namespace Task2 //Мы можем изменить название namespace'a на более подходящее, например BoxingUnboxing?
 {
 	class Program
 	{
-		static void Main(string[] args)
+		static void Main(string[] args) //Почему бы не увеличить объём данных для демострации?
 		{
 			Stopwatch stopwatch = new Stopwatch();
 			Random random = new Random();

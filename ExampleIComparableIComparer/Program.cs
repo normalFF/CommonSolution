@@ -15,7 +15,7 @@ namespace ExampleIComparableIComparer
 			Console.WriteLine("Сортировка по умолчанию:");
 			Array.Sort(people);
 			foreach (People p in people)
-				Console.WriteLine(p.ToString());
+				Console.WriteLine(p.ToString()); //Можем выделить повторяющийся код в отдельную функцию void PrintResult();
 
 			Console.WriteLine("\nОбратная сортировка по именам:");
 			Array.Sort(people, People.sortNameDescending());
@@ -28,7 +28,7 @@ namespace ExampleIComparableIComparer
 				Console.WriteLine(p.ToString());
 
 			Array.Sort(people, People.sortAgeDescending());
-			Console.WriteLine("\n");
+			Console.WriteLine("\n"); //Console.WriteLine("\n"); -> Console.WriteLine(); разницы нет, но второе короче
 			foreach (People p in people)
 				Console.WriteLine(p.ToString());
 

@@ -3,7 +3,7 @@ using System.Collections;
 using UsingLibrary;
 using Task3.IEnumerableObjects;
 
-namespace Task3
+namespace Task3 //Почему бы не сделать так, чтобы нэймспэйсы отражали суть того, что в них происходит? :)
 {
 	class Program
 	{
@@ -21,14 +21,14 @@ namespace Task3
 			}
 
 			Console.WriteLine("\n");
-			IEnumerator pers = people.GetEnumerator();
+			IEnumerator pers = people.GetEnumerator(); // pers -> person; IEnumerator -> EnumeratorPeople
 
 			while (pers.MoveNext())
 			{
 				People p = (People)pers.Current;
-				Console.WriteLine(p.ToString());
+				Console.WriteLine(p.ToString());// if (p != null) Console.WriteLine(p.ToString());
 			}
-			//===============================================
+			//=============================================== Что за Берлинская стена?)
 			Console.WriteLine("_____________________\n");
 
 			Transport[] transport = new Transport[] {
@@ -38,7 +38,7 @@ namespace Task3
 									new Train("CSX", "Coal", 190, 320, 12900)};
 
 			TransportEnumerable setTransport = new TransportEnumerable(transport);
-			foreach (Transport transp in setTransport)
+			foreach (Transport transp in setTransport) // transp -> transportItem
 			{
 				Console.WriteLine(transp.ToString());
 			}
