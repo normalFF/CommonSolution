@@ -23,11 +23,11 @@ namespace ExampleIComparableIComparer
 				Console.WriteLine(p.ToString());
 
 			Console.WriteLine("\nСортировка по именам:");
-			Array.Sort(people, People.sortAgeAscending());
+			Array.Sort(people, People.sortAgeAscending());//Судя по названию метода должен сортировать по возрасту)
 			foreach (People p in people)
 				Console.WriteLine(p.ToString());
 
-			Array.Sort(people, People.sortAgeDescending());
+			Array.Sort(people, People.sortAgeDescending());//не дошли еще руки дальше написать вывод текста пояснительного на косоль?))
 			Console.WriteLine("\n");
 			foreach (People p in people)
 				Console.WriteLine(p.ToString());
