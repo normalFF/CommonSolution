@@ -9,32 +9,40 @@ namespace Task2
 		static void Main(string[] args)
 		{
 			Stopwatch stopwatch = new Stopwatch();
+			Random random = new Random();
+			int[] ArrayNumbers = new int[1000000];
+			object[] ArrayObjects = new object[1000000];
 
-			int[] num = new int[5] { 23, 346, 123, 36, 457 };
-			int[] num2 = new int[5];
-			object ob;
-
-			for (int i = 0; i < num.Length; i++)
+			for (int i = 0; i < ArrayNumbers.Length; i++)
 			{
-				stopwatch.Restart();
-				ob = num[i];
-				stopwatch.Stop();
-				Console.Write($"{stopwatch.ElapsedTicks} : ");
-				stopwatch.Restart();
-				num2[i] = (int)ob;
-				stopwatch.Stop();
-				Console.WriteLine(stopwatch.ElapsedTicks);
+				ArrayNumbers[i] = random.Next(1, 40);
 			}
 
-			Console.WriteLine("\n");
-
-			for (int i = 0; i < num.Length; i++)
+			stopwatch.Start();
+			for (int i = 0; i < ArrayNumbers.Length; i++)
 			{
-				stopwatch.Restart();
-				num2[i] = num[i];
-				stopwatch.Stop();
-				Console.WriteLine(stopwatch.ElapsedTicks);
+				ArrayObjects[i] = ArrayNumbers[i];
 			}
+			stopwatch.Stop();
+			Console.WriteLine($"Времени затрачено на упаковку {ArrayObjects.Length} объектов : {stopwatch.ElapsedTicks}");
+
+			stopwatch.Restart();
+			for (int i = 0; i < ArrayNumbers.Length; i++)
+			{
+				ArrayNumbers[i] = (int)ArrayObjects[i];
+			}
+			stopwatch.Stop();
+			Console.WriteLine($"Времени затрачено на распаковку {ArrayObjects.Length} объектов : {stopwatch.ElapsedTicks}");
+
+			int[] ArrayNumbers2 = new int[1000000];
+			stopwatch.Restart();
+			for (int i = 0; i < ArrayNumbers.Length; i++)
+			{
+				ArrayNumbers2[i] = ArrayNumbers[i];
+			}
+			stopwatch.Stop();
+			Console.WriteLine($"Времени затрачено на копирование массива длиной {ArrayObjects.Length} : {stopwatch.ElapsedTicks}");
+
 
 			Console.ReadKey();
 		}
