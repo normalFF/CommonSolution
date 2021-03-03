@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Linq;
 using UsingLibrary;
 
@@ -32,14 +33,24 @@ namespace ExampleIQueryable
 		static void Main(string[] args)
 		{
 			People[] collectivePeople = CreateCollective(100);
-			var selected = collectivePeople.Where(testc => testc.Mass >= 58 && testc.Mass <= 60 && testc.Name.Length == 5);
 
-			foreach (People p in selected)
+			var selected = collectivePeople.Where(testc => testc.Mass >= 58 && testc.Mass <= 60 && testc.Name.Length == 5).OrderBy(val => val.Age);
+			ForeachItem(selected, "Отбор по массе от 58 до 60 и длине имени в 5 букв, сортировка по возрасту");
+
+			Console.WriteLine();
+			selected = collectivePeople.Where(u => u.Age > 26 && u.Age < 30).OrderBy(val => val.Name.Length);
+			ForeachItem(selected, "Отбор по возрасту от 27 до 29, сортировка по длине имени");
+
+			Console.ReadKey();
+		}
+
+		static void ForeachItem(IEnumerable array, string s)
+		{
+			Console.WriteLine(s);
+			foreach (People p in array)
 			{
 				Console.WriteLine(p.ToString());
 			}
-
-			Console.ReadKey();
 		}
 
 		public static People[] CreateCollective(int val)

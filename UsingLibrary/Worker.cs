@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace UsingLibrary
+﻿namespace UsingLibrary
 {
 	public class Worker : People
 	{
-		string _company;
+		private string _company;
 
 		public string Company
 		{
