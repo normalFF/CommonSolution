@@ -1,7 +1,7 @@
 ﻿using System;
 using UsingLibrary;
 
-namespace Task1
+namespace ExampleOOP
 {
 	class Program
 	{

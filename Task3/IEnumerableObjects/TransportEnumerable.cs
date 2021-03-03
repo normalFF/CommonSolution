@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UsingLibrary;
 
-namespace Task3.IEnumerableObjects
+namespace ExampleEnumerable.IEnumerableObjects
 {
 	class TransportEnumerable : IEnumerable
 	{

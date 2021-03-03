@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections;
 using UsingLibrary;
-using Task3.IEnumerableObjects;
+using ExampleEnumerable.IEnumerableObjects;
 
-namespace Task3
+namespace ExampleEnumerable
 {
 	class Program
 	{

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace Task2
+namespace BoxingUnboxing
 {
 	class Program
 	{

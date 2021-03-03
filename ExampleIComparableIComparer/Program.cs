@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using UsingLibrary;
-using ExampleIQueryable;
-using Task3.IEnumerableObjects;
 
 namespace ExampleIComparableIComparer
 {
