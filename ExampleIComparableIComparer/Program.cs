@@ -12,37 +12,32 @@ namespace ExampleIComparableIComparer
 		{
 			People[] people = ExampleIQueryable.Program.CreateCollective(7);
 
-			Console.WriteLine("Сортировка по умолчанию:");
 			Array.Sort(people);
-			foreach (People p in people)
-				Console.WriteLine(p.ToString());
+			ConsoleInfo("Сортировка по умолчанию:", people);
 
-			Console.WriteLine("\nОбратная сортировка по именам:");
 			Array.Sort(people, People.sortNameDescending());
-			foreach (People p in people)
-				Console.WriteLine(p.ToString());
+			ConsoleInfo("\nОбратная сортировка по именам:", people);
 
-			Console.WriteLine("\nСортировка по именам:");
 			Array.Sort(people, People.sortAgeAscending());
-			foreach (People p in people)
-				Console.WriteLine(p.ToString());
+			ConsoleInfo("\nСортировка по возрасту:", people);
 
 			Array.Sort(people, People.sortAgeDescending());
-			Console.WriteLine("\n");
-			foreach (People p in people)
-				Console.WriteLine(p.ToString());
+			ConsoleInfo("\nОбратная сортировка по возрасту:", people);
 
 			Array.Sort(people, People.sortMassAscending());
-			Console.WriteLine("\n");
-			foreach (People p in people)
-				Console.WriteLine(p.ToString());
+			ConsoleInfo("\nСортировка по весу:", people);
 
 			Array.Sort(people, People.sortMassDescending());
-			Console.WriteLine("\n");
-			foreach (People p in people)
-				Console.WriteLine(p.ToString());
+			ConsoleInfo("\nОбратная сортировка по весу:", people);
 
 			Console.ReadKey();
+		}
+
+		static void ConsoleInfo(string s, in People[] people)
+		{
+			Console.WriteLine(s);
+			foreach (People p in people)
+				Console.WriteLine(p.ToString());
 		}
 	}
 }
