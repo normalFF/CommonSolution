@@ -24,7 +24,7 @@ namespace UsingLibrary
 
 		public People(double mass, string name, int age) : base(mass)
 		{
-			_name = name;
+			_name = name ?? throw new ArgumentNullException("Name не может быть null");
 
 			if (age < 0)
 				throw new ArgumentOutOfRangeException("Возраст не может быть отрицательным числом!");

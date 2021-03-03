@@ -16,7 +16,7 @@ namespace UsingLibrary
 
 		public Car(string brand, double maxSpeed, int numbersSeats, double mass) : base(mass, maxSpeed, numbersSeats)
 		{
-			_brand = brand;
+			_brand = brand ?? throw new ArgumentNullException("Brand не может быть null");
 		}
 
 		public override void TravelType()

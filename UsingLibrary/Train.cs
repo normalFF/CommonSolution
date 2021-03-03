@@ -24,8 +24,8 @@ namespace UsingLibrary
 
 		public Train(string manufacturer, string fuel, double maxSpeed, int numbersSeats, double mass) : base(mass, maxSpeed, numbersSeats)
 		{
-			_manufactuter = manufacturer;
-			_fuelType = fuel;
+			_manufactuter = manufacturer ?? throw new ArgumentNullException("Manufacturer не может быть null");
+			_fuelType = fuel ?? throw new ArgumentNullException("FuelType не может быть null");
 		}
 
 		public override void TravelType()
